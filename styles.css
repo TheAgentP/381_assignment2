@@ -1,0 +1,211 @@
+/* ---------------------- */
+/*   Index.html Section   */
+/* ---------------------- */
+header{
+    background-color: #333;
+    padding: 20px;
+    margin: 0px;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-item-name{
+    color: white;
+    font-size: 48px;
+}    
+/* ---------------- */
+/* Navigation Stuff */
+/* ---------------- */
+.nav-flex-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #333;
+    
+}
+/* Navigation Link Attributes */
+.nav-flex-item{
+    color: white;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+/* Something extras I added */
+.nav-flex-item:hover{
+    color: yellow;
+}
+
+.big_bold{
+    font-size: 25px;
+}
+
+/* ---------------- */
+/* About Us Section */
+/* ---------------- */
+.about-flex-container{
+    display: flex;
+    align-content: center;
+}
+
+.about-text-content{
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    flex-grow: 1;
+}
+
+/* Shop Button Stuff */
+.shop-button{
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+
+    color: white;
+}
+
+.shop-button:hover{
+    color: yellow;
+}
+
+/* Custom Star img attributes */
+.star{
+    height: 20px;
+    width: 20px;
+}
+
+/* ---------------- */
+/*  Footer Section  */
+/* ---------------- */
+Footer{
+    background-color: #333;
+    padding: 10px;
+    margin: 0px;
+    color: white;
+
+    text-align: center;
+}
+/* ---------------------- */
+/*  Contact.html Section  */
+/* ---------------------- */
+
+.contact-flex-container{
+    display: flex;
+    align-content: center;
+}
+
+.contact-content{
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;    
+    flex-grow: 1;
+}
+
+.contact-method{
+    background-color: #ddd;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+.contact-link{
+    text-decoration: none;
+}
+
+.contact-link:hover{
+    color: #007BFF;
+}
+
+/* ---------------------- */
+/*  Login.html Section  */
+/* ---------------------- */
+.login-container{
+    display: flex;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-flex-content{
+    padding: 20px;
+    margin: 20px;
+}
+.formfield-label{
+    margin: 10px;
+}
+
+
+.formfield-container{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* These Button Styling will be used for 
+        both Products.html and Login.html*/
+.login-button{
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;    
+}
+
+.login-button:hover{
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+/* ---------------------- */
+/*  Product.html Section  */
+/* ---------------------- */
+.product-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+.product-row{
+    display: flex;
+    flex-direction: row;
+}
+.product-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.product-image{
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-price{
+    color:#007BFF;
+    font: bold;
+}
+
+.product-info-container:hover{
+    background-color: #ffffff;
+}
+
+.product-name{
+    margin-top: 10px;
+    font-size: 22px;
+}
