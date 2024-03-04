@@ -72,6 +72,21 @@ header{
     color: yellow;
 }
 
+/* Remove button */
+
+.remove-button{
+    background-color: #ff5656;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+
+    color: white;
+}
+
+.remove-button:hover{
+    color: yellow;
+}
+
 /* Custom Star img attributes */
 .star{
     height: 20px;

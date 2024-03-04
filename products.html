@@ -26,9 +26,6 @@
             <a class="nav-flex-item" href="login.html">Login</a>
     </div>
 
-
-
-
 <main>
     <div class="product-container">
             <div class="product-row">
@@ -59,11 +56,58 @@
                     <button class="login-button">Add to Cart</button>
                 </div>
             </div>   
-
     </div>
 </main>
+
+<div id="cart">
+    <center>
+    <h2>Shopping Cart</h2>
+    <table>
+        <tbody id="cart-items">
+        <!-- Cart items-->
+        </tbody> 
+    </table>
+</center>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const cartItemsContainer = document.getElementById('cart-items');
+
+        // Function to add items to cart
+        function addItemToCart(productName, productPrice) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${productName}</td>
+                <td>$${productPrice}</td>
+                <td><input type="number" min="1" value="1"></td>
+                <td><button class="remove-button">Remove</button></td>
+            `;
+            cartItemsContainer.appendChild(row);
+        }
+
+        // Event listener for adding items to cart
+        const addToCartButtons = document.querySelectorAll('.login-button');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                const productContainer = event.target.closest('.product-info-container');
+                const productName = productContainer.querySelector('.product-name').textContent;
+                const productPrice = productContainer.querySelector('.product-price').textContent.slice(1); // Remove the "$" sign
+                addItemToCart(productName, productPrice);
+            });
+        });
+
+        // Event listener for removing items from cart
+        cartItemsContainer.addEventListener('click', function(event) {
+            if (event.target.classList.contains('remove-button')) {
+                event.target.closest('tr').remove();
+            }
+        });
+    });
+</script>
 
 <footer>
     <p>© Paulo and Rajvir. All rights reserved.</p>
 </footer>
-</body></html>
+</body>
+</html>
