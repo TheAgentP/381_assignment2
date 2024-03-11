@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <p class="flex-container">
+            <img  src="images/pixil-frame-0.jpg" class="flex-item-logo">
+            <h class="flex-item-name">Cubix Rubers</h>
+        </p>
+    </header>
+    <div class="nav-flex-container">
+        <a class="nav-flex-item" href="index.html">Home</a>
+        <a class="nav-flex-item" href="products.html">Products</a>            
+        <a class="nav-flex-item" href="contact.html">Contact</a>
+        <a class="nav-flex-item" href="login.html">Login</a>
+    </div>
+    <main>
+        <center>
+            <div class="signup-container">
+                <form action="signup.php" method="post">
+                    <h2>Sign Up</h2>
+                    <input type="text" name="name" placeholder="Full Name" required><br>
+                    <input type="text" name="email" placeholder="Email" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
+                    <button type="submit" class="login-button">Sign Up</button>
+                </form>
+            </div>
+        </center>
+    </main>
+</body>
+
+</html>

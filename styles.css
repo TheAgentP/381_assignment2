@@ -241,3 +241,24 @@ Footer{
     margin: 20px auto;
     display: none; /* HIDDEN INITIALLY */
 }
+
+.signup-button{
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;    
+
+}
+
+.signup-container{
+    display: flex;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
