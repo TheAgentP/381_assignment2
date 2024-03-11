@@ -224,3 +224,13 @@ Footer{
     margin-top: 10px;
     font-size: 22px;
 }
+
+/* Assignment 3 Stuff */
+
+.messageBox {
+    border: 2px solid black;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px auto;
+    display: none; /* HIDDEN INITIALLY */
+}
