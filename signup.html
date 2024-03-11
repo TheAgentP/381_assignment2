@@ -37,7 +37,7 @@
                         
                     <p>
                         <label class="signup-label", for="username">Username:</label><br>
-                        <input type="text" id="username" name="username" required placeholder="Enter Username" required pattern="[a-zA-Z][a-zA-Z0-9_-]{2,19}">
+                        <input type="text" id="username" name="username" required placeholder="Enter Username" pattern="[a-zA-Z][a-zA-Z0-9_-]{2,19}">
                             <!--
                                 Explanation of pattern snippet:
                                 Ensures that the username starts with a letter(upper/lower is ok), then numbers is ok after the first character
@@ -47,7 +47,7 @@
                     
                     <p>
                         <label class="signup-label", for="password">Password:</label><br>
-                        <input type="password" id="password" name="password" required placeholder="Enter Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[]{}|;:'&quot;,.&lt;>?/`~]).{8,}$">
+                        <input type="password" id="password" name="password" required placeholder="Enter Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[]{}|;:'&quot;,.&lt;>?/`~]).{8,}$">
                             <!--
                                 Explanation of pattern snippet:
                                     - (?=.*\d) == atleast 1 character
@@ -65,7 +65,7 @@
 
                     <p>
                         <label class="signup-label", for="email">Email:</label><br>
-                        <input type="text" id="email" name="email" required placeholder="Enter Email" required pattern="^\S+@\S+\.\S+$">
+                        <input type="text" id="email" name="email" required placeholder="Enter Email" pattern="^\S+@\S+\.\S+$">
                         <input type="submit" value="Signup" style="margin-left: 10px;">
                             <!--
                                 Explanation of each Pattern Snippet

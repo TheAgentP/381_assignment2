@@ -139,7 +139,7 @@ Footer{
 /* ---------------------- */
 /*  Login.html Section  */
 /* ---------------------- */
-/* Sidenote: Changed so that signupalso has different conterparts*/
+/* Sidenote: Changed so that signup also has different counterparts*/
 .login-container, .signup-container{
     display: flex;
     background-color: #ddd;
