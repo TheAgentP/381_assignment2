@@ -16,11 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
             <td>${productName}</td>
             <td>$${productPrice}</td>
             <td class="quantity">1</td>
-            <td>
-                <button class="remove-button">Remove</button>
-                <button class="increment-button">+</button>
-                <button class="decrement-button">-</button>
-            </td>
+            <td><button class="remove-button">Remove</button></td>
         `;
         cartItemsContainer.appendChild(row);
     }
@@ -39,19 +35,12 @@ document.addEventListener('DOMContentLoaded', function(){
     // Event listener for removing items from cart
     cartItemsContainer.addEventListener('click', function(event) {
         if (event.target.classList.contains('remove-button')) {
-            event.target.closest('tr').remove();
-        }
-        // Increment button functionality
-        if (event.target.classList.contains('increment-button')) {
-            const quantityCell = event.target.closest('tr').querySelector('.quantity');
-            quantityCell.textContent = parseInt(quantityCell.textContent) + 1;
-        }
-        // Decrement button functionality
-        if (event.target.classList.contains('decrement-button')) {
             const quantityCell = event.target.closest('tr').querySelector('.quantity');
             const quantity = parseInt(quantityCell.textContent);
             if (quantity > 1) {
                 quantityCell.textContent = quantity - 1;
+            } else {
+                event.target.closest('tr').remove();
             }
         }
     });
