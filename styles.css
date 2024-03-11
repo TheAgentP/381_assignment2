@@ -84,7 +84,7 @@ header{
 }
 
 .remove-button:hover{
-    color: yellow;
+    color: #ff0000;
 }
 
 /* Custom Star img attributes */
@@ -253,3 +253,124 @@ Footer{
     display: none; /* HIDDEN INITIALLY */
 }
 
+.signup-button{
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;    
+
+}
+
+.signup-container{
+    display: flex;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* signup */
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #333;
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Signup form styles */
+.signup-section {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-field {
+    margin: 10px;
+}
+
+.form-field label {
+    display: block;
+}
+
+.form-field input {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#signup-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#signup-button:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+/* Message box styles */
+#message-box {
+    border: 2px solid #f9f9f9;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
