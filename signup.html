@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Add meta tags, title, and link to styles.css here -->
+        <title>Sign-Up Page for Rubix Cubers</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Rubix cube shop">
+        <meta name="keywords" content="Rubix, cube, puzzles, puzzle">
+        <meta name="author" content="Rajvir and Paulo">
+        
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <p class="flex-container">
+            <!-- Logo and website name go here -->
+            <img  src="images/pixil-frame-0.jpg" class="flex-item-logo">
+            <h class="flex-item-name">Cubix Rubers</h>
+            </p>
+        </header>
+        <div class="nav-flex-container">
+            <!-- Navigation links go here -->
+                <a class="nav-flex-item" href="index.html">Home</a>
+                <a class="nav-flex-item" href="products.html">Products</a>            
+                <a class="nav-flex-item" href="contact.html">Contact</a>
+                <a class="nav-flex-item" href="login.html">Login</a>
+        </div>
+
+
+
+
+    <main>
+                <div class="signup-container">
+                    
+                    
+                    <form id="signup-info" action="#", method="post">
+                        
+                    <p>
+                        <label class="signup-label", for="username">Username:</label><br>
+                        <input type="text" id="username" name="username" required placeholder="Enter Username" required pattern="[a-zA-Z][a-zA-Z0-9_-]{2,19}">
+                            <!--
+                                Explanation of pattern snippet:
+                                Ensures that the username starts with a letter(upper/lower is ok), then numbers is ok after the first character
+                                minimum of 2 characters, and maximum of 19 characters(inclusive)
+                            -->
+                    </p>
+                    
+                    <p>
+                        <label class="signup-label", for="password">Password:</label><br>
+                        <input type="password" id="password" name="password" required placeholder="Enter Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[]{}|;:'&quot;,.&lt;>?/`~]).{8,}$">
+                            <!--
+                                Explanation of pattern snippet:
+                                    - (?=.*\d) == atleast 1 character
+                                    - (?=.*[a-z]) == atleast 1 lowercase letter
+                                    - (?=.*[A-Z]) == atleast 1 uppercase letter
+                                    - (?=.*[!@#$%^&*()-_=+[]{}|;:'&quot;,.&lt;>?/`~]) == atleast 1 special character
+                                    - .{8,} == atleast 8 total characters
+                            -->                    
+                    </p>
+
+                    <p>
+                        <label class="signup-label", for="confirm-password">Confirm Password:</label><br>
+                        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-Enter Password">
+                    </p>
+
+                    <p>
+                        <label class="signup-label", for="email">Email:</label><br>
+                        <input type="text" id="email" name="email" required placeholder="Enter Email" required pattern="^\S+@\S+\.\S+$">
+                        <input type="submit" value="Signup" style="margin-left: 10px;">
+                            <!--
+                                Explanation of each Pattern Snippet
+                                        Separates Local from Domain using the "@" symbol, also uses "." as a separator
+                                - [a-zA-Z0-9._%+\-]+: Local, Allows AlphaNumeric characters, dots, underscores, percentage signs, plus signs, and hyphens.
+                                - [a-zA-Z0-9.\-]+: Domain, Allows AlphaNumeric characters, dots, and hyphens.
+                                - [a-z]{2,}: atleast 2 characters. e.g: .com, .tv
+                            -->
+                    </p>
+                
+                    </form>
+
+                </div>
+
+        <div class="signup-messageBox"></div>
+        
+    </main>
+    
+    
+<footer>
+    <p>© Paulo and Rajvir. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
+
+
+</body>
+</html>

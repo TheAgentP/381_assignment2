@@ -139,7 +139,8 @@ Footer{
 /* ---------------------- */
 /*  Login.html Section  */
 /* ---------------------- */
-.login-container{
+/* Sidenote: Changed so that signupalso has different conterparts*/
+.login-container, .signup-container{
     display: flex;
     background-color: #ddd;
     padding: 20px;
@@ -151,7 +152,7 @@ Footer{
     justify-content: center;
 }
 
-.login-label{
+.login-label, .signup-label{
     margin: 10px;
 
     /* Added Lines for Assignment 3*/
@@ -160,7 +161,11 @@ Footer{
 
 
 .login-form input[type="text"],
-.login-form input[type="password"]{
+.login-form input[type="password"],
+.signup-container input[type="text"],
+.signup-container input[type="password"],
+.signup-container input[type="email"]
+{
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
@@ -173,16 +178,22 @@ Footer{
 
 /* These Button Styling will be used for 
         both Products.html and Login.html*/
-.login-button{
+/* Attributes for both login and signup button */
+.login-button, .signup-container input[type="submit"]{
     background-color: #4CAF50;
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
-    opacity: 0.5;    
+    opacity: 0.5;  
+    color: white; 
+    
+    /* Added for Assignment 3*/
+    border: none;
+    cursor: pointer;
 
 }
 
-.login-button:hover{
+.login-button:hover, .signup-container input[type="submit"]:hover{
     background-color: #45A049;
     opacity: 1.0;
 }
@@ -234,10 +245,11 @@ Footer{
 
 /* Assignment 3 Stuff */
 
-.messageBox {
+.messageBox, .signup-messageBox{
     border: 2px solid black;
     background-color: #f9f9f9;
     padding: 10px;
     margin: 20px auto;
     display: none; /* HIDDEN INITIALLY */
 }
+
