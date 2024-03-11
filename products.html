@@ -76,14 +76,24 @@
 
         // Function to add items to cart
         function addItemToCart(productName, productPrice) {
-            const row = document.createElement('tr');
+            const existingItem = cartItemsContainer.querySelector(`tr[data-name="${productName}"]`);
+            if (existingItem) {
+                const quantityInput = existingItem.querySelector('input[type="number"]');
+                quantityInput.value = parseInt(quantityInput.value) + 1;
+                return;
+            }
+            else{
+                const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${productName}</td>
                 <td>$${productPrice}</td>
                 <td><input type="number" min="1" value="1"></td>
                 <td><button class="remove-button">Remove</button></td>
             `;
-            cartItemsContainer.appendChild(row);
+            cartItemsContainer.appendChild(row);,
+            }
+            
+            
         }
 
         // Event listener for adding items to cart
