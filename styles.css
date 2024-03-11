@@ -148,21 +148,27 @@ Footer{
     
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.login-flex-content{
-    padding: 20px;
-    margin: 20px;
-}
-.formfield-label{
+.login-label{
     margin: 10px;
+
+    /* Added Lines for Assignment 3*/
+    display: block;
 }
 
 
-.formfield-container{
+.login-form input[type="text"],
+.login-form input[type="password"]{
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
+
+    /* Added Lines for Assignment 3*/
+    border: 1px solid black;
+    background-color: #ffffff;
+
 }
 
 /* These Button Styling will be used for 
@@ -173,6 +179,7 @@ Footer{
     border-radius: 5px;
     margin: 10px;
     opacity: 0.5;    
+
 }
 
 .login-button:hover{
