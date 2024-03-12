@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Perform validation
         if (!isValidUsername(username)) {
-            showMessage('Invalid Username.', 1);
+            showMessage('Check the Username.', 1);
         } else if (!isValidPassword(password)) {
-            showMessage('Invalid Password.', 1);
+            showMessage('Check the Password', 1);
         } else if (!isValidEmail(email)) {
-            showMessage('Invalid Email', 1);
+            showMessage('Check the Email.', 1);
         } else if (password !== confirmPassword) {
-            showMessage('The Password is not the same', 1);
+            showMessage('Password doesn\'t match.', 1);
         } else {
             showMessage('Sign Up Successful!', 0);
         }
@@ -71,13 +71,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
         messageBox.innerHTML = ''; // Clear previous message
         const messageParagraph = document.createElement('p');
-        if (num = 1) {
+        if (num == 1) {
             messageParagraph.textContent = `Error: ${message}`;
-        } else if(num = 0) {
+        } else if(num == 0) {
             messageParagraph.textContent = `${message}`;
         }else {
             messageParagraph.textContent = `Something went wrong...`;
         }
+        num = 2;
         messageBox.appendChild(messageParagraph);
         messageBox.style.display = 'block';
         console.log(messageBox)
