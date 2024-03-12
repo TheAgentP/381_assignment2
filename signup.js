@@ -35,11 +35,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function isValidPassword(password) {
+        /*    
+            Each Component will make sure that:
+            (?=.*[a-z]): Contains at least one lowercase letter ([a-z]).
+            (?=.*[A-Z]): Contains at least one uppercase letter ([A-Z]).
+            (?=.*\d): Contains at least one digit (\d).
+            (?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?/~.])`: Contains at least one special character from the allowed list.
+            [A-Za-z\d!@#$%^&*()-_=+\[\]{}|;:'",.<>?/~.]`: Matches any of the allowed characters (letters, digits, or special characters).
+            {8,}: Must be at least 8 characters long.   
+            */
+
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?/`~])[A-Za-z\d!@#$%^&*()-_=+\[\]{}|;:'",.<>?/`~]{8,}$/;
         return passwordRegex.test(password);
     }
 
     function isValidEmail(email) {
+        /*
+        Each Component will make sure that
+        [^\s@]+: Matches one or more characters that are not whitespace (\s) or the "@" symbol.
+        @: Matches with "@" symbol.
+        [^\s@]+: Domain, Matches one or more characters that are not whitespace or the "@" symbol.
+        \.: Matches with dot literal.
+        [^\s@]+: Top-Level Domain, Matches one or more characters that are not whitespace or the "@" symbol.(e.g., .com, .net, .io).
+        */                 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
