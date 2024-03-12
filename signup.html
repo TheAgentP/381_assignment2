@@ -33,29 +33,16 @@
                 <div class="signup-container">
                     
                     
-                    <form id="signup-info" action="#", method="post">
+                    <form id="signup-info">
                         
                     <p>
                         <label class="signup-label", for="username">Username:</label><br>
-                        <input type="text" id="username" name="username" required placeholder="Enter Username" pattern="[a-zA-Z][a-zA-Z0-9_-]{2,19}">
-                            <!--
-                                Explanation of pattern snippet:
-                                Ensures that the username starts with a letter(upper/lower is ok), then numbers is ok after the first character
-                                minimum of 2 characters, and maximum of 19 characters(inclusive)
-                            -->
+                        <input type="text" id="username" name="username" required placeholder="Enter Username">
                     </p>
                     
                     <p>
                         <label class="signup-label", for="password">Password:</label><br>
-                        <input type="password" id="password" name="password" required placeholder="Enter Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[]{}|;:'&quot;,.&lt;>?/`~]).{8,}$">
-                            <!--
-                                Explanation of pattern snippet:
-                                    - (?=.*\d) == atleast 1 character
-                                    - (?=.*[a-z]) == atleast 1 lowercase letter
-                                    - (?=.*[A-Z]) == atleast 1 uppercase letter
-                                    - (?=.*[!@#$%^&*()-_=+[]{}|;:'&quot;,.&lt;>?/`~]) == atleast 1 special character
-                                    - .{8,} == atleast 8 total characters
-                            -->                    
+                        <input type="password" id="password" name="password" required placeholder="Enter Password">                
                     </p>
 
                     <p>
@@ -65,15 +52,8 @@
 
                     <p>
                         <label class="signup-label", for="email">Email:</label><br>
-                        <input type="text" id="email" name="email" required placeholder="Enter Email" pattern="^\S+@\S+\.\S+$">
+                        <input type="text" id="email" name="email" required placeholder="Enter Email">
                         <input type="submit" value="Signup" style="margin-left: 10px;">
-                            <!--
-                                Explanation of each Pattern Snippet
-                                        Separates Local from Domain using the "@" symbol, also uses "." as a separator
-                                - [a-zA-Z0-9._%+\-]+: Local, Allows AlphaNumeric characters, dots, underscores, percentage signs, plus signs, and hyphens.
-                                - [a-zA-Z0-9.\-]+: Domain, Allows AlphaNumeric characters, dots, and hyphens.
-                                - [a-z]{2,}: atleast 2 characters. e.g: .com, .tv
-                            -->
                     </p>
                 
                     </form>
@@ -89,7 +69,7 @@
     <p>© Paulo and Rajvir. All rights reserved.</p>
 </footer>
 
-<script src="setup.js"></script>
+<script src="signup_paulo.js"></script>
 
 
 </body>

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let errorMessage = '';
 
         // Username validation
-        if (!/^[A-Za-z][A-Za-z0-9_-]{2,19}$/.test(username)) {
+        if (!/^[A-Za-z]\s*[A-Za-z0-9_-]{2,19}$/.test(username)) {
             errorMessage += 'Username is invalid.\n';
         }
 
