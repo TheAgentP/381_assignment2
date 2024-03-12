@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const signupForm = document.getElementById('signup-info');
-    const messageBox = document.querySelector('.signup-messageBox');
+    const signupForm = document.getElementById('signup-form');
+    const messageBox = document.getElementById('message-box');
+    const messageText = document.getElementById('message-text');
 
     signupForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -10,18 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('email').value;
 
         // Perform validation
-        if (!isValidUsername(username)) {
-            showMessage('Invalid Username.', 1);
-        } else if (!isValidPassword(password)) {
-            showMessage('Invalid Password.', 1);
-        } else if (!isValidEmail(email)) {
-            showMessage('Invalid Email', 1);
-        } else if (password !== confirmPassword) {
-            showMessage('The Password is not the same', 1);
+        if (!isValidUsername(username) || !isValidPassword(password) || !isValidEmail(email) || password !== confirmPassword) {
+            showMessage('Please check your inputs.');
         } else {
-            showMessage('Sign Up Successful!', 0);
+            showMessage('Sign up successful!');
         }
-        
     });
 
     function isValidUsername(username) {
@@ -44,24 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
         return emailRegex.test(email);
     }
 
-    function showMessage(message, num) {
-        let messageBox = document.querySelector('.signup-messageBox');
-        // if messageBox doesn't exist, throws an error.
-        if (!messageBox) {
-            throw new Error('Message box element not found.');
-        }
-    
-        messageBox.innerHTML = ''; // Clear previous message
-        const messageParagraph = document.createElement('p');
-        if (num = 1) {
-            messageParagraph.textContent = `Error: ${message}`;
-        } else if(num = 0) {
-            messageParagraph.textContent = `${message}`;
-        }else {
-            messageParagraph.textContent = `Something went wrong...`;
-        }
-        messageBox.appendChild(messageParagraph);
-        messageBox.style.display = 'block';
-        console.log(messageBox)
+    function showMessage(message) {
+        messageText.textContent = message;
+        messageBox.classList.remove('hidden');
+        setTimeout(function() {
+            messageBox.classList.add('hidden');
+        }, 3000); 
     }
 });

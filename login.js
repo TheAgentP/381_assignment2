@@ -18,7 +18,7 @@ document.getElementById('login-button').addEventListener('click', function() {
 
     .then(users => {
         // finds profile that matches the inputted username and password, if !user, prints error
-        const user = users.find(u => u.email === password && u.name === username);
+        const user = users.find(u => u.email === password && u.username === username);
         if (user) {
             // Function call to showMessage with appropriate messages
             showMessage('Login Successful!');
