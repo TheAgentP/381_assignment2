@@ -9,21 +9,34 @@ document.addEventListener('DOMContentLoaded', function() {
         const confirmPassword = document.getElementById('confirm-password').value;
         const email = document.getElementById('email').value;
 
+        // creates empty string
+        let message = '';
         // Perform validation
         if (!isValidUsername(username)) {
-            showMessage('Check the Username.', 1);
-        } else if (!isValidPassword(password)) {
-            showMessage('Check the Password', 1);
-        } else if (!isValidEmail(email)) {
-            showMessage('Check the Email.', 1);
-        } else if (password !== confirmPassword) {
-            showMessage('Password doesn\'t match.', 1);
-        } else {
-            showMessage('Sign Up Successful!', 0);
+            message = appendMessage(message, 'Check the Username.');
         }
+        if (!isValidPassword(password)) {
+            message = appendMessage(message, 'Check the Password.');
+        }
+        if (!isValidEmail(email)) {
+            message = appendMessage(message, 'Check the Email.');
+        }
+        if (password !== confirmPassword) {
+            message = appendMessage(message, 'Password doesn\'t match.')
+        }
+        
+        showMessage(message);
         
     });
 
+    function appendMessage(message, string){
+        if (message == ''){
+            return string;
+        }else{
+            return message + "\n" + string;
+        }
+    }
+    
     function isValidUsername(username) {
         // Check username requirements
         // Must be between 2 and 19 characters long.
@@ -62,7 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return emailRegex.test(email);
     }
 
-    function showMessage(message, num) {
+    
+    function showMessage(message) {
         let messageBox = document.querySelector('.signup-messageBox');
         // if messageBox doesn't exist, throws an error.
         if (!messageBox) {
@@ -71,12 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
         messageBox.innerHTML = ''; // Clear previous message
         const messageParagraph = document.createElement('p');
-        if (num == 1) {
-            messageParagraph.textContent = `Error: ${message}`;
-        } else if(num == 0) {
-            messageParagraph.textContent = `${message}`;
-        }else {
-            messageParagraph.textContent = `Something went wrong...`;
+        // if message is empty, it means it was successful!
+        if(message == ''){
+            messageParagraph.textContent = `Sign Up Successful!`;
+        }else{
+            messageParagraph.textContent = `Error(s):\n${message}`;
         }
         num = 2;
         messageBox.appendChild(messageParagraph);
