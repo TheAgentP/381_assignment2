@@ -21,10 +21,10 @@ document.getElementById('login-button').addEventListener('click', function() {
         const user = users.find(u => u.email === password && u.username === username);
         if (user) {
             // Function call to showMessage with appropriate messages
-            showMessage('Login Successful!');
+            showMessage('Login successful!');
         } else {
             // Shows Error for when it never matches
-            showMessage('Login Failed... Invalid Username or Password.');
+            showMessage('Invalid username or useremail. Please try again.');
         }
     })
 
