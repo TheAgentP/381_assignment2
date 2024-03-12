@@ -160,8 +160,8 @@ Footer{
 }
 
 
-.login-form input[type="text"],
-.login-form input[type="password"],
+.login-container input[type="text"],
+.login-container input[type="password"],
 .signup-container input[type="text"],
 .signup-container input[type="password"],
 .signup-container input[type="email"]
